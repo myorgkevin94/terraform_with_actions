@@ -20,7 +20,7 @@ resource "random_id" "suffix" {
 module "app_bucket" {
   source           = "../../modules/s3_bucket"
   bucket_name      = "myapp-${terraform.workspace}-bucket-${random_id.suffix.hex}"
-  enable_versioning = false
+  enable_versioning = true
   tags = { env = terraform.workspace }
 }
 
