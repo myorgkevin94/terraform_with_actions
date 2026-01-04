@@ -23,7 +23,8 @@ jobs:
         working-directory: env/dev
       - run: terraform plan -no-color
         working-directory: env/dev
-
+        
+# Just a commit to enable push to main
   apply:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
