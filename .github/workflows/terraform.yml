@@ -24,7 +24,7 @@ jobs:
       - run: terraform plan -no-color
         working-directory: env/dev
         
-# Just a commit to enable push to main
+# Just a commit to enable push to main => again, put with required review
   apply:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
